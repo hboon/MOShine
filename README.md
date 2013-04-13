@@ -1,3 +1,5 @@
+Patches, etc written in ObjC that is meant to be used by RubyMotion to work around limitations.
+
 License
 ---
 BSD unless otherwise stated.
