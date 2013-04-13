@@ -12,6 +12,11 @@ config
 project.xcworkspace/
 xcuserdata/
 
+# RubyMotion
+*.bridgesupport
+build-iPhoneOS/
+build-iPhoneSimulator/
+
 # Other tools
 tags
 .idea
