@@ -42,3 +42,11 @@
 + (id)moAppearanceWhenContainedIn:(NSArray*)anArray;
 
 @end
+
+
+@interface UIBarButtonItem (MOUIAppearanceAdditions)
+
+//Primarily an alternative to the variadic +appearanceWhenContainedIn: that can't be called from RubyMotion. See https://groups.google.com/forum/?fromgroups=#!topic/rubymotion/vbEEQE9-pvU and http://hipbyte.myjetbrains.com/youtrack/issue/RM-80
++ (id)moAppearanceWhenContainedIn:(NSArray*)anArray;
+
+@end

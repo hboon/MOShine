@@ -38,6 +38,7 @@
 
 @implementation UIView (MOUIAppearanceAdditions)
 
+//dup of UIBarButtonItem's
 + (id)moAppearanceWhenContainedIn:(NSArray*)anArray {
 	switch ([anArray count]) {
 		case 0:
@@ -62,6 +63,42 @@
 			return [UINavigationBar appearanceWhenContainedIn:anArray[0], anArray[1], anArray[2], anArray[3], anArray[4], anArray[5], anArray[6], anArray[7], anArray[8], nil];
 		case 10:
 			return [UINavigationBar appearanceWhenContainedIn:anArray[0], anArray[1], anArray[2], anArray[3], anArray[4], anArray[5], anArray[6], anArray[7], anArray[8], anArray[9], nil];
+		default:
+			NSAssert(NO, @"We don't support so many containers");
+			return nil;
+	}
+}
+
+@end
+
+
+@implementation UIBarButtonItem (MOUIAppearanceAdditions)
+
+//dup of UIView's
++ (id)moAppearanceWhenContainedIn:(NSArray*)anArray {
+	switch ([anArray count]) {
+		case 0:
+			return nil;
+		case 1:
+			return [UIBarButtonItem appearanceWhenContainedIn:anArray[0], nil];
+		case 2:
+			return [UIBarButtonItem appearanceWhenContainedIn:anArray[0], anArray[1], nil];
+		case 3:
+			return [UIBarButtonItem appearanceWhenContainedIn:anArray[0], anArray[1], anArray[2], nil];
+		case 4:
+			return [UIBarButtonItem appearanceWhenContainedIn:anArray[0], anArray[1], anArray[2], anArray[3], nil];
+		case 5:
+			return [UIBarButtonItem appearanceWhenContainedIn:anArray[0], anArray[1], anArray[2], anArray[3], anArray[4], nil];
+		case 6:
+			return [UIBarButtonItem appearanceWhenContainedIn:anArray[0], anArray[1], anArray[2], anArray[3], anArray[4], anArray[5], nil];
+		case 7:
+			return [UIBarButtonItem appearanceWhenContainedIn:anArray[0], anArray[1], anArray[2], anArray[3], anArray[4], anArray[5], anArray[6], nil];
+		case 8:
+			return [UIBarButtonItem appearanceWhenContainedIn:anArray[0], anArray[1], anArray[2], anArray[3], anArray[4], anArray[5], anArray[6], anArray[7], nil];
+		case 9:
+			return [UIBarButtonItem appearanceWhenContainedIn:anArray[0], anArray[1], anArray[2], anArray[3], anArray[4], anArray[5], anArray[6], anArray[7], anArray[8], nil];
+		case 10:
+			return [UIBarButtonItem appearanceWhenContainedIn:anArray[0], anArray[1], anArray[2], anArray[3], anArray[4], anArray[5], anArray[6], anArray[7], anArray[8], anArray[9], nil];
 		default:
 			NSAssert(NO, @"We don't support so many containers");
 			return nil;
